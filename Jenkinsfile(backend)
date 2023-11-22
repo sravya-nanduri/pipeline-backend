@@ -11,7 +11,7 @@ pipeline{
                 sh '''
                 sudo su -
                 npm install
-                screen -d -m -S screen.npmStart npm start
+                nohup npm start
                 '''
              }
 
