@@ -11,7 +11,7 @@ pipeline{
                 sh '''
                 sudo su -
                 npm install
-                nohup npm start
+                nohup ./startscript.sh 3000 &
                 '''
              }
 
