@@ -11,7 +11,7 @@ pipeline{
                 sh '''
                 sudo su -
                 npm install
-                nohup node index.js --host 65.0.45.232 --port 5000 > output.log 2>&1 &
+                nohup node index.js output.log 2>&1 &
 
                 '''
              }
