@@ -1,18 +1,20 @@
 pipeline{
-    agent any{
+    agent any
         stages{
             stage('git pull'){
                 steps{
-                    git url: 'https://github.com/sravya-nanduri/new-react-app.git', branch:'master'
+                git url: 'https://github.com/sravya-nanduri/new-react-app.git', branch:'master'
                 }
-            stage('installing nodemodules '){
+            }
+            stage('building the app'){
+             steps{
                 sh '''
                 sudo su -
                 npm install
-                node index.js
+                npm run build
                 '''
-            }
+             }
+
             }
         }
-    }
 }
