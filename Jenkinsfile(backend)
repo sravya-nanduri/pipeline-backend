@@ -12,7 +12,7 @@ pipeline{
                 sudo su -
                 npm install
                 nohup npm start > output.log 2>&1 &
-
+                ps aux | grep node
                 '''
              }
 
