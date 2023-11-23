@@ -11,8 +11,9 @@ pipeline{
                 sh '''
                 sudo su -
                 npm install
-                nohup node index.js > output.log 2>&1 &
-                ps aux | grep node
+                //nohup node index.js > output.log 2>&1 &
+                //ps aux | grep node
+                forever node index.js
                 '''
              }
 
